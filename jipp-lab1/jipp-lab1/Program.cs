@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace jipp_lab1
 {
@@ -133,6 +134,12 @@ namespace jipp_lab1
            {
                Console.WriteLine($"Liczba: {num}");
             }
+
+           List<string> fruits = new List<string> { "Pomidor", "Jabłko", "Marchewka", "Gruszka" };
+           Console.WriteLine(string.Join(", ", fruits));
+           fruits.RemoveAt(0);
+           fruits.Remove(fruits[fruits.Count - 1]);
+           Console.WriteLine(string.Join(", ", fruits));
 
         }
     }
