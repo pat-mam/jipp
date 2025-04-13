@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FolmyDB1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62d0f36468361c086be1189a150178603beb39ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("FolmyDB1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FolmyDB1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
