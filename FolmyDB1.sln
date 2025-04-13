@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolmyDB1", "FolmyDB1\FolmyDB1.csproj", "{D32E4135-1B54-4073-9F67-F3C7B2E1528F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D32E4135-1B54-4073-9F67-F3C7B2E1528F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32E4135-1B54-4073-9F67-F3C7B2E1528F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32E4135-1B54-4073-9F67-F3C7B2E1528F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32E4135-1B54-4073-9F67-F3C7B2E1528F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
