@@ -12,7 +12,7 @@ namespace Music_Shop
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=shop.db"));
-            builder.Services.AddSession(); // ⬅️ przeniesione wyżej
+            builder.Services.AddSession(); 
 
             var app = builder.Build();
 
@@ -35,7 +35,7 @@ namespace Music_Shop
 
             app.UseRouting();
 
-            app.UseSession(); // ⬅️ dodane tutaj
+            app.UseSession(); 
             app.UseAuthorization();
 
             app.MapControllerRoute(
