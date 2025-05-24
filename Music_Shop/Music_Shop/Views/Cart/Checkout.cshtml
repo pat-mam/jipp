@@ -1,0 +1,43 @@
+﻿@model List<Music_Shop.Models.CartItem>
+@{
+	ViewData["Title"] = "Finalizacja zakupu";
+	var total = ViewBag.Total != null ? (decimal)ViewBag.Total : 0;
+}
+
+<h2>Finalizacja zakupu</h2>
+
+@if (!Model.Any())
+{
+	<p>Twój koszyk jest pusty.</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Produkt</th>
+			<th>Ilość</th>
+			<th>Cena</th>
+			<th>Suma</th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Product.Name</td>
+				<td>@item.Quantity</td>
+				<td>@item.Product.Price.ToString("C")</td>
+				<td>@(item.Quantity * item.Product.Price).ToString("C")</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+
+	<p><strong>Łączna kwota: @total.ToString("C")</strong></p>
+
+	<form asp-action="CheckoutConfirm" method="post">
+		<button type="submit" class="btn btn-success">Potwierdź zakup</button>
+		<a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+	</form>
+}

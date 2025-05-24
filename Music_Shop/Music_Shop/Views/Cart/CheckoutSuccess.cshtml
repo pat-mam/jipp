@@ -1,0 +1,10 @@
+﻿@{
+	ViewData["Title"] = "Zakup zakończony";
+	var total = ViewBag.Total != null ? (decimal)ViewBag.Total : 0;
+}
+
+<h2>Dziękujemy za zakup!</h2>
+<p>Twoja transakcja została sfinalizowana.</p>
+<p><strong>Łączna kwota: @total.ToString("C")</strong></p>
+
+<a asp-controller="Store" asp-action="Index" class="btn btn-primary">Powrót do sklepu</a>

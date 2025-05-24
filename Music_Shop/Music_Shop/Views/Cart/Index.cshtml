@@ -1,0 +1,38 @@
+﻿@model List<Music_Shop.Models.CartItem>
+
+<h2>Twój koszyk</h2>
+
+@if (!Model.Any())
+{
+	<p>Koszyk jest pusty.</p>
+}
+else
+{
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Produkt</th>
+			<th>Cena</th>
+			<th>Ilość</th>
+			<th>Razem</th>
+			<th>Akcje</th>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Product.Name</td>
+				<td>@item.Product.Price.ToString("C")</td>
+				<td>@item.Quantity</td>
+				<td>@(item.Quantity * item.Product.Price).ToString("C")</td>
+				<td>
+					<a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.ProductId">Usuń</a>
+				</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+
+	<a class="btn btn-success" asp-controller="Cart" asp-action="Checkout">Finalizuj zakup</a>
+}
